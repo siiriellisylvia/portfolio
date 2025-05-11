@@ -47,6 +47,16 @@ const projectSchema = new Schema(
     liveLink: {
       type: String,
     },
+    githubLink: {
+      type: String,
+    },
+    youtubeLink: {
+      type: String,
+    },
+    customEmbed: { // New field for custom embeds
+      title: String, // Optional title for the embed section
+      html: String,  // The HTML content for the embed
+    },
   },
   { timestamps: true }, // Automatically add `createdAt` and `updatedAt`
 );
