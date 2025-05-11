@@ -8,7 +8,7 @@ export default function HeroSection() {
   return (
     <main className="relative top-0 min-h-screen w-full">
       {/* Portrait image - adjusted for bottom alignment and size */}
-      <div className="absolute right-0 bottom-[55vh] z-10 h-[32vh] md:right-[2rem] md:bottom-0 md:h-[70vh] lg:right-[5rem] lg:h-[80vh] 2xl:right[10rem]">
+      <div className="2xl:right[10rem] absolute right-0 bottom-[55vh] z-10 h-[32vh] md:right-[2rem] md:bottom-0 md:h-[70vh] lg:right-[5rem] lg:h-[80vh]">
         <img
           src={heroImage}
           alt="Siiri Lietu"
@@ -33,7 +33,8 @@ export default function HeroSection() {
           </p>
           <p className="mt-6">
             This portfolio is made with React Router v7, TypeScript, Tailwind
-            CSS and MongoDB. Images and videos are hosted on Cloudinary. It's a
+            CSS and MongoDB. Images and videos are hosted on Cloudinary, and the
+            site is deployed on Render, with a custom Simply domain. It's a
             constant work in progress, as it should be!
           </p>
           {/* Icon carousel that flows behind the portrait*/}

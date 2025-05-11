@@ -2,7 +2,7 @@ export default function AboutSection() {
   return (
     <section className="bg-primary-green relative z-3 flex w-full flex-col justify-center px-[var(--spacing-page-mobile)] py-6 text-white md:min-h-screen md:px-[var(--spacing-page)] 2xl:px-[var(--spacing-page-xl)]">
       <div>
-        <h2 className="text-primary-pink mt-0 mb-10 pb-5">About me</h2>
+        <h2 className="text-primary-pink mt-0 mb-10 pb-5">about me.</h2>
 
         <div className="space-y-6">
           <div>
