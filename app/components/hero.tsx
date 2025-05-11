@@ -8,7 +8,7 @@ export default function HeroSection() {
   return (
     <main className="relative top-0 min-h-screen w-full">
       {/* Portrait image - adjusted for bottom alignment and size */}
-      <div className="absolute right-0 bottom-[55vh] z-10 h-[30vh] md:right-[2rem] md:bottom-0 md:h-[65vh] lg:right-[5rem] lg:h-[80vh] 2xl:right-[10rem]">
+      <div className="absolute top-[17vh] right-0 z-10 h-[28vh] md:top-auto md:right-[2rem] md:bottom-0 md:h-[65vh] lg:right-[5rem] lg:h-[80vh] 2xl:right-[10rem]">
         <img
           src={heroImage}
           alt="Siiri Lietu"
@@ -19,7 +19,7 @@ export default function HeroSection() {
       <section className="relative z-3 flex min-h-screen flex-col">
         <div className="bg-primary-green text-primary-pink relative flex h-[45vh] shrink-0 grow-0 flex-row justify-between md:min-h-[40vh] md:shrink md:grow">
           <Stars />
-          <div className="mt-auto flex w-2/3 flex-col py-20 pl-[var(--spacing-page-mobile)] md:pl-[var(--spacing-page)] 2xl:pl-[var(--spacing-page-xl)]">
+          <div className="mt-auto flex w-2/3 flex-col py-20 pl-[var(--spacing-page-mobile)] md:pt-20 md:pb-4 md:pl-[var(--spacing-page)] 2xl:pl-[var(--spacing-page-xl)]">
             <h2>Hi, nice to see you here!</h2>
             <h1>I'm Siiri,</h1>
           </div>
@@ -34,8 +34,9 @@ export default function HeroSection() {
             </p>
             <p className="mt-6">
               This portfolio is made with React Router v7, TypeScript, Tailwind
-              CSS and MongoDB. Assets are hosted on Cloudinary and
-              the site is deployed on Render, with a custom domain. A work in process, as it should be!
+              CSS and MongoDB. Assets are hosted on Cloudinary and the site is
+              deployed on Render, with a custom Simply domain. A work in process, as it
+              should be!
             </p>
           </div>
           {/* Icon carousel that flows behind the portrait*/}
