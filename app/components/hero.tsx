@@ -1,6 +1,8 @@
-import heroImage from "../../public/assets/portrait.png";
 import Stars from "./stars";
 import IconContainer from "./iconContainer";
+
+const heroImage =
+  "https://res.cloudinary.com/dxzq1qavb/image/upload/v1746964703/portrait_llqu1r.png";
 
 export default function HeroSection() {
   return (
@@ -31,7 +33,8 @@ export default function HeroSection() {
           </p>
           <p className="mt-6">
             This portfolio is made with React Router v7, TypeScript, Tailwind
-            CSS and MongoDB. It's a constant work in progress, as it should be!
+            CSS and MongoDB. Images and videos are hosted on Cloudinary. It's a
+            constant work in progress, as it should be!
           </p>
           {/* Icon carousel that flows behind the portrait*/}
           <div className="mt-6">
