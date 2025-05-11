@@ -55,7 +55,7 @@ h4 {
   @apply text-base md:text-xl;
 }
 
-p {
+p, ul {
   @apply text-sm font-light md:text-base;
 }
 

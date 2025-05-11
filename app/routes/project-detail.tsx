@@ -90,8 +90,7 @@ export default function ProjectDetail({
           </div>
         )}
       </section>
-      <section className="bg-light-pink flex-grow px-[var(--spacing-page-mobile)] py-10 md:px-[var(--spacing-page)] 2xl:px-[var(--spacing-page-xl)]">
-        <p className="text-primary-green mt-4 text-lg">{project.description}</p>
+      <section className="bg-light-pink flex-grow px-[var(--spacing-page-mobile)] py-5 md:px-[var(--spacing-page)] 2xl:px-[var(--spacing-page-xl)]">
         {project.overview && (
           <>
             <h3 className="text-primary-green mt-6">Overview</h3>
@@ -100,19 +99,21 @@ export default function ProjectDetail({
             </p>
           </>
         )}
-        {project.improvements && (
+        {project.features && project.features.length > 0 && (
           <>
-            <h3 className="text-primary-green mt-6">Improvements</h3>
-            <p className="text-primary-green mt-4 text-lg">
-              {project.improvements}
-            </p>
+            <h3 className="mt-6">Features</h3>
+            <ul className="mt-4 list-disc pl-5">
+              {project.features.map((feature, index) => (
+                <li key={index}>{feature}</li>
+              ))}
+            </ul>
           </>
         )}
-        {project.features && (
+        {project.improvements && (
           <>
-            <h3 className="text-primary-green mt-6">Features</h3>
-            <p className="text-primary-green mt-4 text-lg">
-              {project.features}
+            <h3 className="mt-6">Improvements</h3>
+            <p className="mt-4">
+              {project.improvements}
             </p>
           </>
         )}
