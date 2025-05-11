@@ -1,6 +1,5 @@
 import { type ProjectType } from "~/db/models/Project";
 import { Link } from "react-router";
-import Button from "./button";
 
 interface ProjectsListProps {
   projects: ProjectType[];
@@ -34,19 +33,7 @@ export default function ProjectsList({ projects }: ProjectsListProps) {
               )}
             </div>
 
-            {project.liveLink && (
-              <div
-                className="absolute right-4 bottom-4 hidden opacity-0 transition-opacity duration-300 group-hover:opacity-100 md:block"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <Button
-                  label="See live solution"
-                  link={project.liveLink}
-                  isExternal={true}
-                  className="bg-primary-green text-primary-pink"
-                />
-              </div>
-            )}
+
           </Link>
         ))}
       </div>
