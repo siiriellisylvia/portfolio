@@ -70,7 +70,7 @@ export default function ProjectDetail({
 
         {project.video ? (
           <video
-            className="h-1/2 w-2/3 md:h-[50vh] md:w-1/2"
+            className="w-full mt-6 md:mt-0 md:w-1/2 md:h-[50vh]"
             autoPlay
             loop
             muted
@@ -82,10 +82,10 @@ export default function ProjectDetail({
           <img
             src={project.image}
             alt={project.title || "Project image"}
-            className="h-1/2 w-1/2 rounded-lg object-contain md:h-full md:w-1/2"
+            className="w-full mt-6 rounded-lg object-contain md:mt-0 md:w-1/2 md:h-full"
           />
         ) : (
-          <div className="flex h-1/2 w-full items-center justify-center rounded-lg bg-gray-200 md:h-full md:w-4/5">
+          <div className="flex w-full h-48 mt-6 items-center justify-center rounded-lg bg-gray-200 md:mt-0 md:h-full md:w-4/5">
             <p className="text-gray-500">No media available</p>
           </div>
         )}
@@ -121,10 +121,8 @@ export default function ProjectDetail({
         {project.youtubeLink && (
           <>
             <h3 className="mt-6">Video presentation</h3>
-            <div className="py-10">
-              {" "}
+            <div>
               <div className="aspect-video">
-                {" "}
                 <iframe
                   className="h-full w-full"
                   src={project.youtubeLink}
@@ -140,12 +138,11 @@ export default function ProjectDetail({
         {project.customEmbed && project.customEmbed.html && (
           <>
             {project.customEmbed.title && (
-              <h3 className="text-primary-green mt-6">
+              <h3 className="mt-6">
                 {project.customEmbed.title}
               </h3>
             )}
             <div
-              className="py-10" // Keep vertical padding, horizontal padding is inherited
               dangerouslySetInnerHTML={{
                 __html: project.customEmbed.html,
               }}
