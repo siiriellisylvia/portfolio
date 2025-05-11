@@ -21,8 +21,8 @@ export default function ProjectDetail({
   const { project } = loaderData;
 
   return (
-    <main className="w-full md:min-h-screen">
-      <section className="flex h-auto flex-col items-center px-4 pt-20 pb-5 md:flex-row md:px-40">
+    <main className="flex min-h-screen w-full flex-col">
+      <section className="flex h-auto min-w-1/2 flex-col items-center px-4 pt-20 pb-5 md:flex-row md:px-40">
         <div className="flex flex-col gap-4">
           <h2>{project.title}</h2>
           <h3 className="text-green-dark">{project.subtitle}</h3>
@@ -43,6 +43,28 @@ export default function ProjectDetail({
               <Swords />
               <p>{project.tech}</p>
             </div>
+          </div>
+          <div className="mt-6 flex flex-row gap-4">
+            {project.liveLink && (
+              <div className="mt-6">
+                <Button
+                  label="Live demo"
+                  link={project.liveLink}
+                  isExternal={true}
+                  className="bg-primary-green text-primary-pink"
+                />
+              </div>
+            )}
+            {project.githubLink && (
+              <div className="mt-6">
+                <Button
+                  label="Github"
+                  link={project.githubLink}
+                  isExternal={true}
+                  className="bg-primary-green text-primary-pink"
+                />
+              </div>
+            )}
           </div>
         </div>
 
@@ -68,24 +90,47 @@ export default function ProjectDetail({
           </div>
         )}
       </section>
-
-      <section className="bg-light-pink h-1/3 px-4 py-10 md:px-40">
+      <section className="bg-light-pink flex-grow px-4 py-10 md:px-40">
         <p className="text-primary-green mt-4 text-lg">{project.description}</p>
-        <h3 className="text-primary-green mt-6">Overview</h3>
-        <p className="text-primary-green mt-4 text-lg">{project.overview}</p>
-        <h3 className="text-primary-green mt-6">Improvements</h3>
-        <p className="text-primary-green mt-4 text-lg">
-          {project.improvements}
-        </p>
-        {project.liveLink && (
-          <div className="mt-6">
-            <Button
-              label="See it in action"
-              link={project.liveLink}
-              isExternal={true}
-              className="bg-primary-green text-primary-pink"
+        {project.overview && (
+          <>
+            <h3 className="text-primary-green mt-6">Overview</h3>
+            <p className="text-primary-green mt-4 text-lg">
+              {project.overview}
+            </p>
+          </>
+        )}
+        {project.improvements && (
+          <>
+            <h3 className="text-primary-green mt-6">Improvements</h3>
+            <p className="text-primary-green mt-4 text-lg">
+              {project.improvements}
+            </p>
+          </>
+        )}
+        {project.features && (
+          <>
+            <h3 className="text-primary-green mt-6">Features</h3>
+            <p className="text-primary-green mt-4 text-lg">
+              {project.features}
+            </p>
+          </>
+        )}
+        {/* Conditionally render custom embed if it exists */}
+        {project.customEmbed && project.customEmbed.html && (
+          <>
+            {project.customEmbed.title && (
+              <h3 className="text-primary-green mt-6">
+                {project.customEmbed.title}
+              </h3>
+            )}
+            <div
+              className="py-10" // Keep vertical padding, horizontal padding is inherited
+              dangerouslySetInnerHTML={{
+                __html: project.customEmbed.html,
+              }}
             />
-          </div>
+          </>
         )}
       </section>
     </main>
