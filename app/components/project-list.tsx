@@ -13,7 +13,7 @@ export default function ProjectsList({ projects }: ProjectsListProps) {
           <Link
             key={project.slug || `project-${project._id}`}
             to={`/projects/${project.slug}`}
-            className="bg-primary-pink text-primary-green hover:text-green-dark group relative flex w-full flex-col gap-10 rounded-lg p-4 transition-all duration-300 md:flex-row"
+            className="bg-primary-pink text-primary-green hover:text-green-dark group relative flex w-full flex-col rounded-lg p-4 transition-all duration-300 md:flex-row md:gap-10"
           >
             {project.image && (
               <div className="w-full overflow-hidden rounded-lg md:w-1/3">
@@ -32,8 +32,6 @@ export default function ProjectsList({ projects }: ProjectsListProps) {
                 <p className="text-sm">{project.description}</p>
               )}
             </div>
-
-
           </Link>
         ))}
       </div>
