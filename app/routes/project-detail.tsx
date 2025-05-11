@@ -22,7 +22,7 @@ export default function ProjectDetail({
 
   return (
     <main className="flex min-h-screen w-full flex-col">
-      <section className="flex h-auto min-w-1/2 flex-col items-center px-4 pt-20 pb-5 md:flex-row md:px-40">
+      <section className="flex h-auto min-w-1/2 flex-col items-center px-4 pt-20 pb-5 md:flex-row md:justify-between md:items-center md:px-40">
         <div className="flex flex-col gap-4">
           <h2>{project.title}</h2>
           <h3 className="text-green-dark">{project.subtitle}</h3>
@@ -82,7 +82,7 @@ export default function ProjectDetail({
           <img
             src={project.image}
             alt={project.title || "Project image"}
-            className="h-1/2 w-full rounded-lg object-contain md:h-full md:w-4/5"
+            className="h-1/2 w-1/2 rounded-lg object-contain md:h-full md:w-1/2"
           />
         ) : (
           <div className="flex h-1/2 w-full items-center justify-center rounded-lg bg-gray-200 md:h-full md:w-4/5">
@@ -116,7 +116,26 @@ export default function ProjectDetail({
             </p>
           </>
         )}
-        {/* Conditionally render custom embed if it exists */}
+        {/* Conditionally render YouTube video if link exists */}
+        {project.youtubeLink && (
+          <>
+            <h3 className="mt-6">Video presentation</h3>
+            <div className="py-10">
+              {" "}
+              <div className="aspect-video">
+                {" "}
+                <iframe
+                  className="h-full w-full"
+                  src={project.youtubeLink}
+                  title="YouTube video player for project"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </div>
+          </>
+        )}
+        {/* Conditionally render custom embed (Canva) if it exists */}
         {project.customEmbed && project.customEmbed.html && (
           <>
             {project.customEmbed.title && (
