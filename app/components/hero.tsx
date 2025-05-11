@@ -19,13 +19,13 @@ export default function HeroSection() {
       <section className="relative z-3 flex min-h-screen flex-col">
         <div className="bg-primary-green text-primary-pink relative flex h-[45vh] shrink-0 grow-0 flex-row justify-between md:min-h-[40vh] md:shrink md:grow">
           <Stars />
-          <div className="mt-auto flex w-2/3 flex-col py-20 pl-[var(--spacing-page-mobile)] md:pl-[var(--spacing-page)]">
+          <div className="mt-auto flex w-2/3 flex-col py-20 pl-[var(--spacing-page-mobile)] md:pl-[var(--spacing-page)] xl:pl-[var(--spacing-page-xl)]">
             <h2>Hi, nice to see you here!</h2>
             <h1>I'm Siiri,</h1>
           </div>
         </div>
 
-        <div className="bg-primary-pink text-primary-green z-6 h-auto shrink-0 flex-grow px-[var(--spacing-page-mobile)] py-5 md:w-2/3 md:flex-grow-0 md:px-[var(--spacing-page)]">
+        <div className="bg-primary-pink text-primary-green z-6 h-auto shrink-0 flex-grow px-[var(--spacing-page-mobile)] py-5 md:w-2/3 md:flex-grow-0 md:px-[var(--spacing-page)] xl:px-[var(--spacing-page-xl)]">
           <h2>a frontend developer.</h2>
           <p>
             I'm a web development student looking for an internship for fall

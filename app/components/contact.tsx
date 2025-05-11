@@ -6,7 +6,7 @@ export default function ContactSection() {
     <>
       <section
         id="contact"
-        className="md:[var(--spacing-page)] bg-primary-pink relative z-3 flex h-screen w-full flex-col items-center justify-center gap-6 px-[var(--spacing-page-mobile)] text-center"
+        className="bg-primary-pink relative z-3 flex h-screen w-full flex-col items-center justify-center gap-6 px-[var(--spacing-page-mobile)] text-center md:px-[var(--spacing-page)] xl:px-[var(--spacing-page-xl)]"
       >
         <div>
           <h2>Am I the colleague you're looking for?</h2>

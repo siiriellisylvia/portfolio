@@ -22,7 +22,7 @@ export default function ProjectDetail({
 
   return (
     <main className="flex min-h-screen w-full flex-col">
-      <section className="flex h-auto min-w-1/2 flex-col items-center px-4 pt-20 pb-5 md:flex-row md:justify-between md:items-center md:px-40">
+      <section className="flex h-auto min-w-1/2 flex-col items-center px-[var(--spacing-page-mobile)] pt-20 pb-5 md:flex-row md:items-center md:justify-between md:px-[var(--spacing-page)] xl:px-[var(--spacing-page-xl)]">
         <div className="flex flex-col gap-4">
           <h2>{project.title}</h2>
           <h3 className="text-green-dark">{project.subtitle}</h3>
@@ -90,7 +90,7 @@ export default function ProjectDetail({
           </div>
         )}
       </section>
-      <section className="bg-light-pink flex-grow px-4 py-10 md:px-40">
+      <section className="bg-light-pink flex-grow px-[var(--spacing-page-mobile)] py-10 md:px-[var(--spacing-page)] xl:px-[var(--spacing-page-xl)]">
         <p className="text-primary-green mt-4 text-lg">{project.description}</p>
         {project.overview && (
           <>
