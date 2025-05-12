@@ -7,8 +7,8 @@ import Project, { type ProjectType } from "~/db/models/Project";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Siiri Lietu Portfolio" },
-    { name: "description", content: "Welcome to my portfolio!" },
+    { title: "Siiri Lietu portfolio" },
+    { name: "description", content: "Welcome to my frontend portfolio. Explore my recent projects and get to know me!" },
   ];
 }
 
